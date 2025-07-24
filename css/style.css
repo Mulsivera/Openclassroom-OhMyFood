@@ -177,4 +177,34 @@ header .location i {
 .restaurants .cards .card .infos p {
   font-size: 17px;
   font-weight: 300;
+}
+
+footer {
+  background-color: #353535;
+  padding: 22px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .title {
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Shrikhand", serif;
+  color: white;
+}
+footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer div a {
+  color: white;
+}
+footer div .icon_texte {
+  color: white;
+  font-weight: 600;
+}
+footer div .icon_texte i {
+  margin-right: 15px;
+  width: 15px;
 }/*# sourceMappingURL=style.css.map */

@@ -8,6 +8,7 @@
 $roboto: "Roboto", sans-serif;
 $shrikhand: "Shrikhand", serif;
 
+$Grey: #353535;
 $lightGray: #EAEAEA;
 $Background: #F6F6F6;
 $Purple: #9356DC;
@@ -244,6 +245,47 @@ header {
                     font-weight: 300;
                 }
 
+            }
+
+        }
+
+    }
+
+}
+
+footer {
+
+    background-color: $Grey;
+    padding: 22px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .title {
+        font-size: 18px;
+        font-weight: 300;
+        font-family: $shrikhand;
+        color: white;
+    }
+
+    div {
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        a {
+            color: white;
+        }
+
+        .icon_texte {
+
+            color: white;
+            font-weight: 600;
+
+            i {
+                margin-right: 15px;
+                width: 15px;
             }
 
         }

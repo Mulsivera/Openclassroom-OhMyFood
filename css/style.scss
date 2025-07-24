@@ -28,7 +28,6 @@ p {
     font-family: $roboto;
     font-weight: bold;
     font-size: 24px;
-    text-align: center;
 }
 
 %Paragraphe {
@@ -52,6 +51,8 @@ p {
 /* Styles */
 
 header {
+
+    margin-bottom: 4px;
 
     .logo {
         display: flex;
@@ -100,6 +101,7 @@ header {
 
     h1 {
         @extend %Titre_Section;
+        text-align: center;
     }
 
     p {
@@ -108,6 +110,66 @@ header {
 
     button {
         @extend %Gradient_Button;
+    }
+
+}
+
+.fonctionnement {
+
+    padding: 45px 20px;
+
+    h2 {
+        @extend %Titre_Section;
+        margin-bottom: 35px;
+    }
+
+    .steps {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+        .step {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+            align-items: center;
+            height: 72.5px;
+            position: relative;
+
+            .number {
+                color: white;
+                padding: 5px 10px;
+                border-radius: 25px;
+                background-color: $Purple;
+                position: absolute;
+                z-index: 10;
+                font-size: 14px;
+            }
+
+            .info {
+                display: flex;
+                justify-content: flex-start;
+                padding: 25px 30px;
+                align-items: center;
+                gap: 20px;
+                background-color: $Background;
+                width: 346.5px;
+                margin-left: 15px;
+                border-radius: 25px;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+
+                h3 {
+                    font-family: $roboto;
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+
+            }
+
+         }
+
     }
 
 }

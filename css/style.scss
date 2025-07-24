@@ -1,42 +1,52 @@
 /* Fonts */
 
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Shrikhand';
-    src: url('../fonts/Shrikhand.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap');
 
 /* Variables */
 
-$roboto: 'Roboto', sans-serif;
-$shrikhand: 'Shrikhand', cursive;
+$roboto: "Roboto", sans-serif;
+$shrikhand: "Shrikhand", serif;
 
 $lightGray: #EAEAEA;
+$Background: #F6F6F6;
+$Purple: #9356DC;
+$Pink: #FF79DA;
 
 
 /* Styles Globaux */
 
-body {
-    margin: 0px;
-}
-
-h1 {
-    font-family: $shrikhand;
-}
-
 p {
     font-family: $roboto;
-    margin: 0px;
+}
+
+* {
+    margin: 0;
+}
+
+%Titre_Section {
+    font-family: $roboto;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+%Paragraphe {
+    font-family: $roboto;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+}
+
+%Gradient_Button {
+    background: linear-gradient( $Pink 0%, $Purple 100%);
+    width: 218px;
+    height: 50px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: $roboto;
 }
 
 /* Styles */
@@ -74,6 +84,30 @@ header {
             vertical-align: middle;
         }
 
+    }
+
+}
+
+.hero {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 35px;
+    gap: 20px;
+    background-color: $Background;
+
+    h1 {
+        @extend %Titre_Section;
+    }
+
+    p {
+        @extend %Paragraphe;
+    }
+
+    button {
+        @extend %Gradient_Button;
     }
 
 }

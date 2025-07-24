@@ -1,31 +1,39 @@
 /* Fonts */
-@font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Shrikhand";
-  src: url("../fonts/Shrikhand.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
 /* Variables */
 /* Styles Globaux */
-body {
-  margin: 0px;
-}
-
-h1 {
-  font-family: "Shrikhand", cursive;
-}
-
 p {
   font-family: "Roboto", sans-serif;
-  margin: 0px;
+}
+
+* {
+  margin: 0;
+}
+
+.hero h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.hero p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+}
+
+.hero button {
+  background: linear-gradient(#FF79DA 0%, #9356DC 100%);
+  width: 218px;
+  height: 50px;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Styles */
@@ -52,4 +60,14 @@ header .location i {
   display: inline-block;
   line-height: 1;
   vertical-align: middle;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 35px;
+  gap: 20px;
+  background-color: #F6F6F6;
 }/*# sourceMappingURL=style.css.map */

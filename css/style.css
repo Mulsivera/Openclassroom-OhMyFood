@@ -1,0 +1,55 @@
+/* Fonts */
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../fonts/Shrikhand.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* Variables */
+/* Styles Globaux */
+body {
+  margin: 0px;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+}
+
+/* Styles */
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 63px;
+}
+header .logo img {
+  width: 197px;
+  height: 38px;
+}
+header .location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  background-color: #EAEAEA;
+  height: 50px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 -2px 2px rgba(0, 0, 0, 0.25);
+}
+header .location i {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+}/*# sourceMappingURL=style.css.map */

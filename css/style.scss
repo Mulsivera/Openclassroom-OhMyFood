@@ -16,6 +16,8 @@ $Pink: #FF79DA;
 $Green: #99E2D0;
 $FontGreen: #008766;
 
+$BreakPointTablette: 767.9px;
+$BreakpointOrdinateur: 1339.9px;
 
 /* Styles Globaux */
 
@@ -128,9 +130,22 @@ header {
 
     padding: 45px 20px;
 
+    @media (min-width: $BreakpointOrdinateur) {
+        padding: 50px 180px;
+    }
+
+    @media (min-width: $BreakPointTablette) {
+        text-align: center;
+    }
+
     h2 {
         @extend %Titre_Section;
         margin-bottom: 35px;
+
+        @media (min-width: $BreakpointOrdinateur) {
+            text-align: left;
+        }
+
     }
 
     .steps {
@@ -140,13 +155,26 @@ header {
         align-items: center;
         gap: 25px;
 
+        @media (min-width: $BreakpointOrdinateur) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
         .step {
             display: flex;
-            width: 100%;
+            width: 350px;
             justify-content: flex-start;
             align-items: center;
             height: 72.5px;
             position: relative;
+            
+            @media (min-width: $BreakPointTablette) {
+                justify-content: center;
+            }
+
+            @media (min-width: $BreakpointOrdinateur) {
+                width: 33%;
+            }
 
             .number {
                 color: white;
@@ -156,6 +184,15 @@ header {
                 position: absolute;
                 z-index: 10;
                 font-size: 14px;
+
+                @media (min-width: $BreakPointTablette) {
+                    left: 21%;
+                }
+
+                @media (min-width: $BreakPointTablette) {
+                    left: -3%;
+                }
+
             }
 
             .info {
@@ -169,6 +206,11 @@ header {
                 margin-left: 15px;
                 border-radius: 25px;
                 box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+
+                @media (min-width: $BreakPointTablette) {
+                    margin-left: 0px;;
+                    width: 100%;
+                }
 
                 h3 {
                     font-family: $roboto;
@@ -192,6 +234,10 @@ header {
     padding: 45px 20px;
     background-color: $Background;
 
+    @media (min-width: $BreakpointOrdinateur) {
+        padding: 50px 180px;
+    }
+
     h2 {
         @extend %Titre_Section;
     }
@@ -201,6 +247,16 @@ header {
         display: flex;
         flex-direction: column;
         gap: 18px;
+
+        
+        @media (min-width: $BreakPointTablette) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (min-width: $BreakpointOrdinateur) {
+            column-gap: 100px;
+        }
 
         .card {
 
@@ -254,10 +310,24 @@ header {
 
                 }
 
-                .button {
+                button {
 
-                    button {
-                        z-index: 10;
+                    background-color: white;
+                    border: none;
+                    z-index: 100;
+
+                    &:active {
+
+                        i {
+                            background: linear-gradient( $Purple 0%, $Pink 100%);;
+                        }
+
+                    }
+
+                    i {
+                        margin-right: 10px;
+                        color: black;
+
                     }
 
                 }
@@ -278,11 +348,28 @@ footer {
     flex-direction: column;
     gap: 20px;
 
+    @media (min-width: $BreakpointOrdinateur) {
+        flex-direction: row-reverse;
+        align-items: end;
+        height: 114px;
+        padding: 30px 25px;
+    }
+
     .title {
         font-size: 18px;
         font-weight: 300;
         font-family: $shrikhand;
         color: white;
+
+        @media (min-width: $BreakPointTablette) {
+            text-align: center;
+        }
+
+        @media (min-width: $BreakpointOrdinateur) {
+            margin-left: 75px;
+            margin-right: 40px;
+        }
+
     }
 
     div {
@@ -291,8 +378,29 @@ footer {
         flex-direction: column;
         gap: 10px;
 
+        @media (min-width: $BreakPointTablette) {
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        @media (min-width: $BreakpointOrdinateur) {
+            
+        }
+
         a {
             color: white;
+
+            @media (min-width: $BreakpointOrdinateur) {
+
+                &:last-of-type {
+                    margin-right: 65px;
+                }
+
+            }
+
+
+
         }
 
         .icon_texte {
@@ -303,6 +411,7 @@ footer {
             i {
                 margin-right: 15px;
                 width: 15px;
+
             }
 
         }

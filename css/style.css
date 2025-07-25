@@ -35,6 +35,10 @@ a {
   border-radius: 50px;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
+  transition: filter 0.25s ease-in-out;
+}
+.hero button:hover {
+  filter: brightness(1.2);
 }
 
 /* Styles */
@@ -169,14 +173,17 @@ header .location i {
   align-items: center;
   padding: 15px;
 }
-.restaurants .cards .card .infos h3 {
+.restaurants .cards .card .infos .textes h3 {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 5px;
 }
-.restaurants .cards .card .infos p {
+.restaurants .cards .card .infos .textes p {
   font-size: 17px;
   font-weight: 300;
+}
+.restaurants .cards .card .infos .button button {
+  z-index: 10;
 }
 
 footer {

@@ -51,6 +51,11 @@ a {
     border-radius: 50px;
     font-size: 16px;
     font-family: $roboto;
+    transition: filter 0.25s ease-in-out;
+
+    &:hover {
+        filter: brightness(1.2);
+    }
 }
 
 /* Styles */
@@ -234,15 +239,27 @@ header {
                 align-items: center;
                 padding: 15px;
 
-                h3 {
-                    font-size: 18px;
-                    font-weight: 600;
-                    margin-bottom: 5px;
+                .textes {
+
+                    h3 {
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                    }
+
+                    p {
+                        font-size: 17px;
+                        font-weight: 300;
+                    }
+
                 }
 
-                p {
-                    font-size: 17px;
-                    font-weight: 300;
+                .button {
+
+                    button {
+                        z-index: 10;
+                    }
+
                 }
 
             }
